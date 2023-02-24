@@ -1,0 +1,18 @@
+version: '3'
+services:
+  freeradius_ldap:
+    build:
+      context: .
+      #variable .env pour les utiliser dans le dockerfile
+      args:
+        LDAP_ADMIN_PASSWORD: ${LDAP_ADMIN_PASSWORD}
+        NOM_DE_DOMAINE: ${NOM_DE_DOMAINE}
+    ports:
+      - "80:80"
+      - "389:389"
+      - "1812:1812/udp"
+      - "1813:1813/udp"
+    command: >
+      bash -c "service slapd start && 
+               service freeradius start && 
+               apache2ctl -DFOREGROUND"
