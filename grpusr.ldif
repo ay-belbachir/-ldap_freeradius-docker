@@ -1,0 +1,70 @@
+dn: cn=GRP,dc=exemple,dc=local
+cn: GRP
+gidnumber: 500
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=user1 user1,dc=exemple,dc=local
+cn: user1 user1
+gidnumber: 500
+givenname: user1
+homedirectory: /home/users/uuser1
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: user1
+uid: uuser1
+uidnumber: 1000
+userpassword: caca
+
+dn: cn=user2 user2,dc=exemple,dc=local
+cn: user2 user2
+gidnumber: 500
+givenname: user2
+homedirectory: /home/users/uuser1
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: user2
+uid: uuser2
+uidnumber: 1000
+userpassword: caca
+
+dn: cn=user3 user3,dc=exemple,dc=local
+cn: user3 user3
+gidnumber: 500
+givenname: user3
+homedirectory: /home/users/uuser1
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: user3
+uid: uuser3
+uidnumber: 1000
+userpassword: caca
+
+dn: cn=user4 user4,dc=exemple,dc=local
+cn: user4 user4
+gidnumber: 500
+givenname: user4
+homedirectory: /home/users/uuser1
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: user4
+uid: uuser4
+uidnumber: 1000
+userpassword: caca
+
+dn: cn=caca caca,dc=exemple,dc=local
+cn: caca caca
+gidnumber: 500
+givenname: caca
+homedirectory: /home/users/uuser1
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: caca
+uid: ccaca
+uidnumber: 1000
+userpassword: caca

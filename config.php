@@ -283,7 +283,7 @@ $servers->newServer('ldap_pla');
 
 /* A convenient name that will appear in the tree viewer and throughout
    phpLDAPadmin to identify this LDAP server to users. */
-$servers->setValue('server','name','ldap.samocaca.local');
+$servers->setValue('server','name','ldap.exemple.local');
 
 /* Examples:
    'ldap.example.com',
@@ -297,7 +297,7 @@ $servers->setValue('server','host','127.0.0.1');
 
 /* Array of base DNs of your LDAP server. Leave this blank to have phpLDAPadmin
    auto-detect it for you. */
-$servers->setValue('server','base',array('dc=samocaca,dc=local'));
+$servers->setValue('server','base',array('dc=exemple,dc=local'));
 
 /* Five options for auth_type:
    1. 'cookie': you will login via a web form, and a client-side cookie will
@@ -323,13 +323,13 @@ $servers->setValue('login','auth_type','session');
    auth_type, then you can also specify the bind_id/bind_pass here for searching
    the directory for users (ie, if your LDAP server does not allow anonymous
    binds. */
-$servers->setValue('login','bind_id','cn=admin,dc=samocaca,dc=local');
+$servers->setValue('login','bind_id','cn=admin,dc=exemple,dc=local');
 #  $servers->setValue('login','bind_id','cn=Manager,dc=example,dc=com');
 
 /* Your LDAP password. If you specified an empty bind_id above, this MUST also
    be blank. */
 // $servers->setValue('login','bind_pass','');
-$servers->setValue('login','bind_pass','159898');
+$servers->setValue('login','bind_pass','defaultpw');
 
 /* Use TLS (Transport Layer Security) to connect to the LDAP server. */
 // $servers->setValue('server','tls',false);

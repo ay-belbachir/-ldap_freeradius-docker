@@ -1,12 +1,13 @@
 version: '3'
 services:
-  freeradius_ldap:
+  ldap_freeradius:
     build:
       context: .
       #variable .env pour les utiliser dans le dockerfile
       args:
         LDAP_ADMIN_PASSWORD: ${LDAP_ADMIN_PASSWORD}
         NOM_DE_DOMAINE: ${NOM_DE_DOMAINE}
+        DN: ${DN}
     ports:
       - "80:80"
       - "389:389"
