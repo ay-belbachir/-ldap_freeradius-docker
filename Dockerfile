@@ -51,8 +51,6 @@ COPY script.sh /usr/local/bin/script.sh
 RUN chmod +x /usr/local/bin/script.sh
 RUN sed -i "s|exemple|${DN}|g" /usr/local/bin/script.sh
 RUN sed -i "s|defaultpw|${LDAP_ADMIN_PASSWORD}|g" /usr/local/bin/script.sh
-
-
 #remove default conf
 RUN rm /etc/freeradius/3.0/sites-enabled/default
 RUN rm /etc/freeradius/3.0/sites-enabled/inner-tunnel
