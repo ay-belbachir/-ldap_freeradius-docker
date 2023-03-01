@@ -3,18 +3,29 @@ listen {
         type = auth
         ipaddr = *
         port = 1812
-}
-authorize {
+                }
+        authorize {
         ldap
         if (ok || updated)  {
         update control {
         Auth-Type := ldap
         }
         }
+        eap {
+                ok = return
+
+        }
+
 }
 authenticate {
         Auth-Type LDAP {
                 ldap
         }
+
+Auth-Type eap {
+                eap
+        }
+
+
 }
 }

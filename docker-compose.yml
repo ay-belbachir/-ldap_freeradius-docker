@@ -7,7 +7,9 @@ services:
       args:
         LDAP_ADMIN_PASSWORD: ${LDAP_ADMIN_PASSWORD}
         NOM_DE_DOMAINE: ${NOM_DE_DOMAINE}
-        DN: ${DN}
+        DC: ${DC}
+        DC2: ${DC2}
+        FREERADIUS_SECRETE: ${FREERADIUS_SECRETE}
     ports:
       - "80:80"
       - "389:389"
