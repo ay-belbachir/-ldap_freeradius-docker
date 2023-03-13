@@ -16,6 +16,8 @@ services:
       - "1812:1812/udp"
       - "1813:1813/udp"
     command: >
-      bash -c "service slapd start && 
+           bash -c " 
+               service slapd start && 
                service freeradius start && 
-               apache2ctl -DFOREGROUND"
+               /usr/local/bin/script.sh &&
+               apache2ctl -DFOREGROUND "
